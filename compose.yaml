@@ -1,0 +1,13 @@
+services:
+  currency-exchange:
+    image: exchange
+    ports:
+      - "8000:8000"
+    networks:
+      - currency-network
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+networks:
+  currency-network:
